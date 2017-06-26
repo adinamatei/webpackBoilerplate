@@ -1,0 +1,27 @@
+{
+  "name": "webpack-experiment",
+  "version": "1.0.0",
+  "description": "webpack experiment",
+  "main": "app.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --progress --colors",
+    "production": "./node_modules/.bin/webpack -p",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adinamatei/webpackExperiment.git"
+  },
+  "author": "Adina Matei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adinamatei/webpackExperiment/issues"
+  },
+  "homepage": "https://github.com/adinamatei/webpackExperiment#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "webpack": "^3.0.0"
+  }
+}
