@@ -1,4 +1,4 @@
 // jshint esversion:6
-const MESAJ = "hello from main";
+const MESAJ = "Webpack is awesome!";
 
 export default MESAJ;

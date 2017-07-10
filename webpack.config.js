@@ -1,8 +1,12 @@
-// TODO: add babel-loader!
-var path = require('path');
+//jshint esversion:6
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 
 module.exports = {
-    entry: "./app.js",
+    entry: "./src/app.js",
+    devtool: 'source-map',
     output: {
         path: path.join(__dirname, 'public'),
         publicPath: '/public/',
@@ -13,17 +17,33 @@ module.exports = {
         port: 8081
     },
     module: {
-      rules: [
+      loaders: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
-            options: {
-              presets: ['env']
-            }
           }
-        }
+        },
+        {
+          test: /\.(jpg|png|gif)$/,
+          loader: 'file-loader',
+          exclude: /node-modules/
+        },
+
+        {
+          test: [/\.css$/, /\.scss$/],
+          use: ExtractTextPlugin.extract ({
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader'],
+          }),
+
+        },
+
       ]
-    }
+    },
+
+    plugins: [
+      new ExtractTextPlugin("style.css"),
+    ]
 };
