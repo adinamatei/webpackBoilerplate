@@ -1,10 +1,10 @@
 // jshint esversion:6
 var $ = require("jquery");
-import mesaj from './main.js';
-// require('./app.css');
-require('./css/index.css');
-import Image from './image';
-import makeRequest from './button';
+import mesaj from './js/main.js';
+
+var css = require('./css/index.css');
+import Image from './js/image.js';
+import makeRequest from './js/button.js';
 
 const alertText = (txt) => {
   alert(txt);
