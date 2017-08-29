@@ -4,6 +4,7 @@
   "description": "webpack boilerplate",
   "main": "app.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack-dev-server --colors --open",
     "prod": "cross-env NODE_ENV=production PLATFORM=web webpack -p",
     "preprod": "rimraf ./public/*",
@@ -44,6 +45,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "jquery": "^3.2.1"
   }
 }

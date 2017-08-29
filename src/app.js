@@ -1,10 +1,11 @@
 // jshint esversion:6
 var $ = require("jquery");
-import mesaj from './js/main.js';
+import mesaj from './js/index.js';
 
 var css = require('./css/index.css');
 import Image from './js/image.js';
 import makeRequest from './js/button.js';
+import 'font-awesome/scss/font-awesome.scss';
 
 const alertText = (txt) => {
   alert(txt);

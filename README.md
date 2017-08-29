@@ -1,40 +1,39 @@
 # Webpack Boilerplate
 
-This is a simple boilerplate to get up and running with a Webpack based build system, designed to make environment-specific configuration as easy as possible, in order to quickly build up a website.
+Webpack is a module bundler for JavaScript files.
 
-This boilerplate is preconfigured whit a development and production configuration and you can add more as needed.
+This repository is a Webpack boilerplate for my new projects. It's designed to make environment-specific configuration to build up a web app.
+
+This Webpack boilerplate includes the following libs:
+
+* jQuery
+* font-awesome
+* bootstrap (not added)
 
 ## Requirements
 
-Is only need **node.js** pre-installed.
+Is only needs **node.js** v6 pre-installed.
 
-## Features
+## Features and plugins
 
-- Babel-loader to transform ES6 for all `.js`
+- Babel package allows transpiling of JavaScript files
 - Development and production
     - Development: enables Webpack's dev server
-    - Production: minification and css extraction
-- HTML Webpack Plugin creates HTML files to serve webpack bundles and include a hash in the filename which change every compilation
-- Sass loader, CSS loader, Style loader to load the css and put into `.js` bundle
-- Extract Text Plugin extract text from a bundle into a separate file (`*.css` in a separate CSS file )
-- URL loader used to load image into bundle
-- Rimraf delete files
-- Easy enviroment configuration on a per-webpack-entry-point basis
-- Pre-configured NPM scripts for common tasks
+    - Production: minification and css and html extraction
+- HTML Webpack Plugin
+- Sass loader
+- Extract Text Plugin
+- Hot Modules Replacement
 
+## How to use
 
-## Setup
+1. Clone this repo
+2. Install the dependencies
+  `npm install`
+3. Launch the boilerplate app
+  `npm start`
+4. A new browser tab should be opening on [http://localhost:8081/](http://localhost:8081/), with livereload and autocompile
+5. Don't horget to update `package.json` with your `name`, `version`, `description`, `author`, `license` for your project.
 
-Install dependencies
-`npm install`
-
-## Production
-
-Run the Webpack and build the app, results will be in folder `public`
-`npm run prod`
-
-## Development
-
-Run the local webpack-dev-server with livereload and autocompile on [http://http://localhost:8081/](http://localhost:8081/)
-`npm run dev`
-
+ To build the app for production run
+  `npm run prod`

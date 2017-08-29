@@ -1,6 +1,7 @@
 //jshint esversion:6
 const path = require('path');
 const webpack = require('webpack');
+const jquery = require('jquery');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -15,7 +16,9 @@ const cssConfig = isProd ? cssProd : cssDev;
 
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: {
+    app: "./src/app.js"
+  },
   // devtool: 'source-map',
   output: {
       path: path.resolve(__dirname, 'public'),
@@ -76,6 +79,11 @@ module.exports = {
       allChunks: true
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+    })
   ]
 };
