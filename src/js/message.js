@@ -1,0 +1,3 @@
+const Lorem = "<p>Lorem ipsum dolor sit amet, alienum assentior ne eum, mea id semper feugait persecuti, ad vero justo sed. Errem intellegat comprehensam eu pro, qui ne sonet mediocrem intellegebat. Etiam prompta probatus ad vix, et partem iriure vis, qui reque expetenda scriptorem an. At his vivendo suscipit. Has ad nonumy tempor vocibus. Eum in lorem delicata vituperata, ex pro oratio efficiendi.</p>";
+
+export default Lorem;

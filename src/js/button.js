@@ -1,4 +1,3 @@
-// jshint esversion: 6
 function makeRequest(url, data) {
   alert('Merge requestul');
 }

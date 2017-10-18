@@ -1,8 +1,7 @@
-// jshint esversion:6
-const MESAJ = "Webpack is awesome!";
+const Message = "<h1>Webpack is awesome!</h1>";
 
 $('h1').on("click", function(){
   $(this).css('color', 'purple');
 });
 
-export default MESAJ;
+export default Message;

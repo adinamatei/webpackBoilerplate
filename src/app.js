@@ -1,8 +1,8 @@
-// jshint esversion:6
-var $ = require("jquery");
-import mesaj from './js/index.js';
-
-var css = require('./css/index.css');
+const $ = require("jquery");
+import Message from './js/index.js';
+import Lorem from './js/message';
+const css = require('./css/index.css');
+import './css/app.css';
 import Image from './js/image.js';
 import makeRequest from './js/button.js';
 import 'font-awesome/scss/font-awesome.scss';
@@ -11,12 +11,15 @@ const alertText = (txt) => {
   alert(txt);
 };
 
-// alertText(mesaj);
+console.log(Message);
 
 const newMessage = () => Image;
 
 const app = document.getElementById('app');
-app.innerHTML = newMessage();
+app.innerHTML = Message + newMessage();
+
+const mes = document.querySelector('.content');
+mes.innerHTML = Lorem;
 
 $(document).ready(function(){
     $("button").click(function(){
