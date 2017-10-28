@@ -8,7 +8,7 @@ This Webpack boilerplate includes the following libs:
 
 * jQuery
 * font-awesome
-* bootstrap (not added)
+* bootstrap (removed)
 
 ## Requirements
 
