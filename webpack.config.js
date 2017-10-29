@@ -15,10 +15,10 @@ const cssConfig = isProd ? cssProd : cssDev;
 
 
 module.exports = {
-  entry: {
-    // "font-awesome/scss/font-awesome.scss"
-      app: "./src/app.js"
-  },
+  entry: [
+      "font-awesome/scss/font-awesome.scss",
+      "./src/app.js"
+  ],
   // devtool: 'source-map',
   output: {
       path: path.resolve(__dirname, 'public'),
